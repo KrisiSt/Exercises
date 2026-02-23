@@ -1,0 +1,134 @@
+.timer-app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timer-card {
+  background: white;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  min-width: 400px;
+}
+
+.timer-title {
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.timer-display {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.time-number {
+  display: block;
+  font-size: 5em;
+  font-weight: bold;
+  color: white;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 5px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.time-label {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9em;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-start {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+.btn-start:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(17, 153, 142, 0.4);
+}
+
+.btn-pause {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.btn-pause:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
+}
+
+.btn-reset {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.btn-reset:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .timer-card {
+    min-width: 90%;
+    padding: 30px 20px;
+  }
+
+  .timer-title {
+    font-size: 2em;
+  }
+
+  .time-number {
+    font-size: 3.5em;
+  }
+
+  .timer-controls {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
